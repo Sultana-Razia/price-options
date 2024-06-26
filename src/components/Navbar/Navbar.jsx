@@ -1,7 +1,11 @@
+import { useState } from "react";
 import Link from "../Link/Link";
-
+import { FiMenu } from "react-icons/fi";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
+
     const routes = [
         { id: 1, path: '/', name: 'Home' },
         { id: 2, path: '/about', name: 'About Us' },
@@ -12,6 +16,14 @@ const Navbar = () => {
 
     return (
         <nav>
+            <div onClick={() => setOpen(!open)} className="text-xl md:hidden">
+                {
+                    open === true ?
+                        <RxCross2 />
+                        :
+                        <FiMenu />
+                }
+            </div>
             <ul className="md:flex gap-10 justify-center">
                 {
                     routes.map(route => <Link
