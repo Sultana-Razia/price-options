@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <div onClick={() => setOpen(!open)} className="text-xl md:hidden">
+            <div onClick={() => setOpen(!open)} className="text-xl md:hidden p-6">
                 {
                     open === true ?
                         <RxCross2 />
@@ -24,7 +24,7 @@ const Navbar = () => {
                         <FiMenu />
                 }
             </div>
-            <ul className="md:flex gap-10 justify-center">
+            <ul className={`md:flex gap-4 md:gap-10 pl-6 justify-center absolute md:static duration-1000 bg-gray-100 rounded-md ${open ? 'top-14' : '-top-60'}`}>
                 {
                     routes.map(route => <Link
                         key={route.id}

@@ -1,15 +1,16 @@
 
 import './App.css'
-import DaisyNav from './components/DaisyNav/DaisyNav'
+// import DaisyNav from './components/DaisyNav/DaisyNav'
 import Navbar from './components/Navbar/Navbar'
+import PriceOptions from './components/PriceOptions/PriceOptions'
 
 function App() {
 
   return (
     <>
-      <DaisyNav></DaisyNav>
+      {/* <DaisyNav></DaisyNav> */}
       <Navbar></Navbar>
-      <h1 className='text-6xl'>Vite + React</h1>
+      <h1 className='text-6xl pt-7'>Vite + React</h1>
       <div className="stats shadow">
         <div className="stat">
           <div className="stat-figure text-secondary">
@@ -68,6 +69,7 @@ function App() {
           <div className="stat-desc">↘︎ 90 (14%)</div>
         </div>
       </div>
+      <PriceOptions></PriceOptions>
     </>
   )
 }
